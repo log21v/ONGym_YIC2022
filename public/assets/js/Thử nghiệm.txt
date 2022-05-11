@@ -1,0 +1,38 @@
+Dòng 135 file index.js
+
+
+//Code đổi ảnh
+let passed = false;
+
+//Thử nghiệm
+//Tự động chuyển ảnh luôn ko cần check
+if (check == true) {
+  id++;
+  $("#rest").attr("src", lienket[id]);
+  passed = false;
+  updateMes();
+}
+
+function updateMes() {
+  if (passed) {
+    $("#span_").html("Cool, now move to next picture");
+    // $("button_").html("Next");
+
+    //Thử nghiệm (chỗ cũ)
+    //Tự động chuyển ảnh luôn ko cần check
+  }
+
+  if (!passed) {
+    $("#span_").html("");
+    $("#button_").html("Skip");
+  }
+}
+
+// Nút skip
+$("#button_").click(() => {
+  //chuyển qua pose khác
+  id++;
+  $("#rest").attr("src", lienket[id]);
+  passed = false;
+  updateMes();
+});

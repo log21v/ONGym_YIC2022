@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ONGym_Main</title>
+        <link rel="icon" href="assets/images/man_body_logo.png" type="image/jpg" />
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/bootstrap.min.css"
+        />
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/css/fontawesome-all.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.socket.io/4.1.2/socket.io.min.js" integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg" crossorigin="anonymous"></script>
+
+    </head>
+ 
+    <body>
+
+        <div id="header-holder">
+            <div class="cloud-bg"></div>
+            <nav id="nav" class="navbar navbar-full">
+              <div class="container-fluid">
+                <div class="container container-nav">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="navbar-header">
+                        <button
+                          aria-expanded="false"
+                          type="button"
+                          class="navbar-toggle collapsed"
+                          data-toggle="collapse"
+                          data-target="#bs"
+                        >
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://localhost:8888/trangchu"
+                          ><img src="assets/images/logo_main.png" alt="ONGym"
+                        /></a>
+                      </div>
+                      <div
+                        style="height: 1px"
+                        role="main"
+                        aria-expanded="false"
+                        class="navbar-collapse collapse navbar-collapse-centered"
+                        id="bs"
+                      >
+                        <ul class="nav navbar-nav navbar-nav-centered">
+                          <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8888/trangchu"
+                              >Trang chủ</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              class="nav-link"
+                              href="http://localhost:8888/vechungtoi"
+                              >Về chúng tôi</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8888/khoidong"
+                              >Khởi động</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:8888/main"
+                              >Tập luyện</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <div id="top-content" class="container-fluid">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="page-title">Tập luyện</div>
+                        <div class="page-subtitle">
+                            HỆ THỐNG ĐANG TRONG QUÁ TRÌNH THỬ NGHIỆM NÊN CÒN SAI SÓT
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <!-- <div id="info" style='display:none'></div> -->
+
+        <div id="loading" style='display:flex'>
+        <!--  <div class="spinner-text">
+                Loading PoseNet model...
+            </div> -->
+            <!-- <div class="sk-spinner sk-spinner-pulse"></div> -->
+        </div>
+
+        <!-- camera part -->
+        <div id='main' style='display:none'>
+            
+            <!-- camera ask permission -->
+            <video id="video" playsinline style="display: none;"></video>
+            <!-- show camera -->
+            <canvas id="output" />
+        
+
+        </div>
+
+        <div id='picture'>
+            <img id="rest">
+            <span id='span_'></span>
+            <button id='button_' type="button">Next</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script> -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.1"></script>
+
+    
+        <!-- Adds the WASM backend to the global backend registry -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@2.0.0/dist/tf-backend-wasm.js"></script>
+        <script src="assets/js/demo_utils.js"></script>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/core.js"></script>
+        
+        
+    </body>
+
+</html>
